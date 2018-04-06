@@ -1,10 +1,22 @@
 ﻿@model WebApplication.Models.RegisterViewModel
 @{
-    ViewBag.Title = "Register";
+ 
     Layout = null;
 }
 
 <!DOCTYPE html>
+<style>
+    .infobox {
+        position: relative;
+        height: auto;
+        padding: 40px;
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 50px auto;
+        box-sizing: border-box;
+        border: 4px solid #000000;
+    }
+</style>
 <html>
 <head>
     <meta charset="utf-8">
@@ -26,13 +38,16 @@
     <![endif]-->
 
 </head>
-<body class="hold-transition register-page">
-    <div class="register-box">
+<body class="hold-transition register-page" style="background-color: #e6f7ff;" align="center">
+    <table width="100%">
+    <tr>
+    <td>
+    <div class="register-box infobox" style="width: 100%; margin-left: 100px; margin-right:auto;margin-top: 10px;">
         <div class="register-logo">
-            <a href="@Url.Action("About", "Home")">Welcome to <b>TPB!</b></a>
+            <a href="@Url.Action("About", "Home")">Welcome !<br><img src="~/Images/photo1.png" alt="Sample Photo" /></a>
         </div>
         <div class="register-box-body">
-            <p class="login-box-msg">Register a new membership</p>
+            <p class="login-box-msg">Join us and enjoy!</p>
             @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" }))
             {
                 @Html.AntiForgeryToken()
@@ -64,10 +79,18 @@
             }
             <div class="social-auth-links text-center">
                 <a href="@Url.Action("Login", "Account")" class="text-center">I already have a membership</a>
-                </div>
+            </div>
         </div>
     </div>
+    </td>
+    <td>
+        <div>
+            <img src="~/Images/photo8.png" alt="Sample Photo" />
+        </div>
 
+    </td>
+    </tr>
+    </table>
     @Scripts.Render("~/AdminLTE/plugins/jquery/js")
     @Scripts.Render("~/AdminLTE/bootstrap/js")
     @Scripts.Render("~/AdminLTE/plugins/icheck/js")

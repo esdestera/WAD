@@ -1,6 +1,5 @@
 ﻿@model WebApplication.Models.NewAccountViewModel
 @{
-    ViewBag.Title = "Accounts";
 }
 <div class="nav-tabs-custom">
     <ul class="nav nav-tabs">
@@ -11,7 +10,7 @@
 <div class="tab-content">
     <div class="active tab-pane" id="activity">
         @{
-            ViewBag.Title = "MyAccounts";
+   
         }
 
         <div class="table-responsive mailbox-messages">
@@ -40,10 +39,9 @@
 
     <div class="tab-pane" id="timeline">
         @{
-            ViewBag.Title = "NewAccount";
+         
         }
 
-        <h2>NewAccount</h2>
 
         @using (Html.BeginForm()) 
         {
