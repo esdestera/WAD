@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "MyPayments";
+}
+
+<style>
+    table, th, td {
+        border: 1px;
+        padding: 10px;
+    }
+
+    table {
+        border-spacing: 15px;
+    }
+
+    .a {
+        height: 27px;
+        width: 160px
+    }
+</style>
+<div align="center">
+    <h2>My transfers</h2>
+    <form method="post" class="b">
+        <fieldset>
+            <table>
+               
+                <tr>
+                   
+                        <td><label for="Transfers">To: @Html.ActionLink("My transfer1", "ToMyAccounts", "Transfers")</label></td>
+                        <td><label for="Transfers">USD</label></td>
+                   
+                </tr>
+
+                <tr>
+                 
+                        <td><label for="Transfers">To: @Html.ActionLink("My transfer2", "ToOthers", "Transfers")</label></td>
+                        <td><label for="Transfers">USD </label></td>
+              
+                </tr>
+
+                <tr>
+                    
+                        <td><label for="Transfers">To: @Html.ActionLink("My transfer3", "ToMyAccounts", "Transfers")</label></td>
+                        <td><label for="Transfers">EURO</label></td>
+                   
+                </tr>
+
+                <tr>
+                    
+                        <td><label for="Transfers">To: @Html.ActionLink("My transfer3", "ToMyAccounts", "Transfers")</label></td>
+                        <td><label for="Transfers">EURO</label></td>
+                    
+                </tr>
+
+                <tr>
+                   
+                        <td><label for="Transfers">To: @Html.ActionLink("My transfer3", "ToMyAccounts", "Transfers")</label></td>
+                        <td><label for="Transfers">RON</label></td>
+                
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</div>
+

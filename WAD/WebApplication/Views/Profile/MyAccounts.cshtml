@@ -1,0 +1,39 @@
+﻿@model WebApplication.Models.NewAccountViewModel
+
+@{
+    ViewBag.Title = "MyAccounts";
+}
+
+<h2>MyAccounts</h2>
+
+<div>
+    <h4>NewAccountViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IBAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IBAN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Currency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Currency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardLimit)
+        </dd>
+
+    </dl>
+</div>
+
