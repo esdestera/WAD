@@ -615,11 +615,11 @@
     <Content Include="Views\CustomerServices\Map.cshtml" />
     <Content Include="Views\TransactionsHistory\TransactionHistory.cshtml" />
     <Content Include="Views\Profile\Accounts.cshtml" />
-    <Content Include="Views\Transfers\ToMyAccounts.cshtml" />
-    <Content Include="Views\Transfers\MyTransfers.cshtml" />
-    <Content Include="Views\Transfers\ToOthers.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Account\About.cshtml" />
+    <Content Include="Views\Transfers\ToMyAccounts.cshtml" />
+    <Content Include="Views\Transfers\ToOthers.cshtml" />
+    <Content Include="Views\Transfers\MyTransfers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

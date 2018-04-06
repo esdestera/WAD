@@ -2,7 +2,7 @@
 
 namespace WebApplication.Controllers
 {
-    public class Transfers : Controller
+    public class TransfersController : Controller
     {
         public ActionResult ToMyAccounts()
         {
@@ -13,7 +13,6 @@ namespace WebApplication.Controllers
         {
             return View();
         }
-
 
         public ActionResult MyTransfers()
         {

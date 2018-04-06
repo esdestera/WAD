@@ -11,7 +11,7 @@ namespace WebApplication.Controllers
 
         public ActionResult Map()
         {
-            throw new System.NotImplementedException();
+            return View();
         }
     }
 }

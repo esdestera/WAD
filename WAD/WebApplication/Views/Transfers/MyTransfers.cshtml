@@ -1,65 +1,82 @@
 ﻿
 @{
-    ViewBag.Title = "MyPayments";
+    ViewBag.Title = "Transfers";
 }
 
 <style>
     table, th, td {
+        align-self: center;
         border: 1px;
         padding: 10px;
     }
 
     table {
+        align-self: center;
         border-spacing: 15px;
     }
 
     .a {
+        align-self: center;
         height: 27px;
         width: 160px
     }
 </style>
-<div align="center">
-    <h2>My transfers</h2>
-    <form method="post" class="b">
+
+@{
+    if (IsPost)
+    {
+        string Transfer = Request.Form["Transfer"];
+
+        <text>
+            You entered: <br />
+            Phone number: @Transfer <br />
+        </text>
+    }
+}
+
+
+    <h2>MyTransfer</h2>
+    <form method="post" class="b" align ="center">
         <fieldset>
             <table>
-               
+
                 <tr>
-                   
-                        <td><label for="Transfers">To: @Html.ActionLink("My transfer1", "ToMyAccounts", "Transfers")</label></td>
-                        <td><label for="Transfers">USD</label></td>
-                   
+
+                    <br></br>
+                    <td><label for="Transfer">@Html.ActionLink("Transfer1", "ToMyAccounts", "Transfers")</label></td>
+                    <td><label for="Transfer">USD</label></td>
+
                 </tr>
 
                 <tr>
-                 
-                        <td><label for="Transfers">To: @Html.ActionLink("My transfer2", "ToOthers", "Transfers")</label></td>
-                        <td><label for="Transfers">USD </label></td>
-              
+
+                    <td><label for="Transfer">@Html.ActionLink("Transfer2", "ToMyAccounts", "Transfers")</label></td>
+                    <td><label for="Transfer">USD </label></td>
+
                 </tr>
 
                 <tr>
-                    
-                        <td><label for="Transfers">To: @Html.ActionLink("My transfer3", "ToMyAccounts", "Transfers")</label></td>
-                        <td><label for="Transfers">EURO</label></td>
-                   
+
+                    <td><label for="Transfer">@Html.ActionLink("Transfer3", "ToMyAccounts", "Transfers")</label></td>
+                    <td><label for="Transfer">EURO</label></td>
+
                 </tr>
 
                 <tr>
-                    
-                        <td><label for="Transfers">To: @Html.ActionLink("My transfer3", "ToMyAccounts", "Transfers")</label></td>
-                        <td><label for="Transfers">EURO</label></td>
-                    
+
+                    <td><label for="Transfer">@Html.ActionLink("Transfer4", "ToMyAccounts", "Transfers")</label></td>
+                    <td><label for="Transfer">EURO</label></td>
+
                 </tr>
 
                 <tr>
-                   
-                        <td><label for="Transfers">To: @Html.ActionLink("My transfer3", "ToMyAccounts", "Transfers")</label></td>
-                        <td><label for="Transfers">RON</label></td>
-                
+
+                    <td><label for="Transfer">@Html.ActionLink("Transfer5", "ToMyAccounts", "Transfers")</label></td>
+                    <td><label for="Transfer">RON</label></td>
+
                 </tr>
             </table>
         </fieldset>
     </form>
-</div>
+
 

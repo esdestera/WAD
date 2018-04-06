@@ -1,7 +1,7 @@
 ﻿@{
     /**/
 
-    ViewBag.Title = "MyAccounts";
+    ViewBag.Title = "Transfers";
 }
 <style>
     table, th, td {
@@ -15,7 +15,7 @@
 
     .a {
         height: 27px;
-        width: 180px
+        width: 225px
     }
 
     .b {
@@ -25,8 +25,6 @@
 
 
 @{
-    //Validation.RequireField("companyname", "From field is required.");
-    //Validation.RequireField("contactname", "Contact name is required.");
 
     if (IsPost)
     {
@@ -47,7 +45,7 @@
     }
 }
 <div align="center">
-    <h2>Transfer to others </h2>
+    <h2>Transfers to others </h2>
     <form method="post">
         <fieldset>
             <table>
@@ -55,27 +53,27 @@
                     <td><label for="Name">Name</label></td>
                     <td>
                         <input type="text" name="Name"
-                               value="@Request.Form["Name"]" />
+                               value="@Request.Form["Name"]" size="30"/>
                     </td>
                 </tr>
                 <tr>
                     <td><label for="IBAN">IBAN</label></td>
                     <td>
                         <input type="text" name="IBAN"
-                               value="@Request.Form["IBAN"]" />
+                               value="@Request.Form["IBAN"]" size="30"/>
                     </td>
                 </tr>
                 <tr>
+                  
+                        <td><label for="From" name="From">From </label></td>
+                        <td>
+                            <select id="accounts" name="accountList" class="a" >
+                                <option value="0" >account1</option>
+                                <option value="1">account2</option>
+                                <option value="2">account3</option>
+                            </select>
+                        </td>
                    
-                    <td><label for="From" name="From">From </label></td>
-                    <td>
-                        <select id="accounts" name="accountList" class="a">
-                            <option value="0">account1</option>
-                            <option value="1">account2</option>
-                            <option value="2">account3</option>
-                        </select>
-                    </td>
-
                 </tr>
 
                 <tr>
@@ -84,28 +82,23 @@
                     </td>
                     <td>
                         <input type="text" name="amount"
-                               value="@Request.Form["Amount"]" />
+                               value="@Request.Form["Amount"]" size="30"/>
                     </td>
-                    <td>
-                        <label for="Currency" name="Currency">Currency </label>
-                        <select id="currency" name="currencyList" class="a">
-                            <option value="0">RON</option>
-                            <option value="1">EURO</option>
-                            <option value="2">USD</option>
-                        </select>
-                    </td>
+                  
                 </tr>
                 <tr>
                     <td><label for="details">Details</label></td>
                     <td>
                         <input type="text" name="details"
-                               value="@Request.Form["Details"]" />
+                               value="@Request.Form["Details"]" size="30"/>
                     </td>
                 </tr>
             </table>
-            <input type="submit" value="Continue" class="submit" />
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             <input type="button" value="Cancel" onclick="window.location = 'http://localhost:51201/Home/Index'" class="cancel_button">
+
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <input type="submit" value="Continue" class="submit" />
+
         </fieldset>
     </form>
 </div>
